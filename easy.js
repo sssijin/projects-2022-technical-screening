@@ -32,9 +32,11 @@ var assert = require("assert")
 
 const altNumbers = (numArray) => {
     // TODO: COMPLETE THIS FUNCTION
-    var final = [];
-    var pos = [];
-    var neg = [];
+    var final = []
+    var pos = []
+    var neg = []
+    
+    // Split array into two arrays based on their sign
     for (let elem of numArray) {
         if (elem >= 0) {
             pos.push(elem)
@@ -43,6 +45,7 @@ const altNumbers = (numArray) => {
         }
     }
 
+    // Checking which array is bigger
     if (pos.length >= neg.length) {
         var arr1 = pos
         var arr2 = neg
@@ -50,6 +53,8 @@ const altNumbers = (numArray) => {
         var arr1 = neg
         var arr2 = pos
     }
+    
+    // Create new array to return, alternating numbers based on which array is bigger
     var num = 0
     var first = 0
     var second = 0
@@ -62,7 +67,7 @@ const altNumbers = (numArray) => {
            first++
         }
         num++
-     }
+    }
     return final
 }
 
